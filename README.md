@@ -22,16 +22,15 @@ En 'app.module.ts' importaremos las clases necesarias para poder trabajar con Fi
 ## Implementación de servicios
 
 Según la documentación podemos llegar a la conclusión de que "un servicio es una clase que se encarga de acceder a los datos para servir a los componentes. Estos servicios se pueden reutilizar para distintos componentes."
-Una vez aclarado esto, hemos generado un servicio con el siguiente comando 'ng generate service post --skip-tests' generando un archivo llamado 'post.service.ts'. En este archivo importaremos los módulos para trabajar con Firestore y nuestro modelo ('Post' en nuestro caso). Además, crearemos y desarrollaremos los métodos que usaremos para nuestro CRUD, los cuales son:
+Una vez aclarado esto, hemos generado un servicio con el siguiente comando 'ng generate service post --skip-tests' generando un archivo llamado 'post.service.ts'. En este archivo importaremos los módulos para trabajar con Firestore y nuestro modelo ('Post' en nuestro caso). Además, crearemos y desarrollaremos los métodos que usaremos para nuestro CRUD, los cuales son
+- getPosts(): nos devolverá todos los documentos.
+- getPostById(): nos devolverá un único elemento.
+- createPost(): creará un elemento.
+- updatePost(): actualizará un elemento.
+- deletePost(): eliminará un elemento
 
--getPosts(): nos devolverá todos los documentos.
--getPostById(): nos devolverá un único elemento.
--createPost(): creará un elemento.
--updatePost(): actualizará un elemento.
--deletePost(): eliminará un elemento
 
-
-##Elementos CRUD
+## Elementos CRUD
 
 Para terminar de implementar las funciones CRUD, crearemos los componentes 'show', 'edit' y 'create'.
 - show: La página principal donde se nos mostrará una tabla con todos los datos almacenados hasta el momento en nuetsro proyecto de Firestore con enlaces a la página de create y edit, de delete no hará falta página ya que es más que suficiente disponer de un botón en esta página que se encargue de borrar el elemento seleccionado.
